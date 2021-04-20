@@ -25,8 +25,8 @@ package ru.job4j.condition;
 public class SqArea {
     public static double square(int p, int k) {
         double h = p / (2 * (k + 1)); //длина
-        double L = h * k; //высота
-        double s = L * h; //площадь прямоугольника
+        double l = h * k; //высота
+        double s = l * h; //площадь прямоугольника
 
         double rsl = s;
         return rsl;

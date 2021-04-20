@@ -17,17 +17,17 @@ public class Point {
     public static double distance(int x1, int y1, int x2, int y2) {
         //Вариант 1:
         //1. Вычесть аргументы x2 и x1.
-        int diff_x2_x1 = x2 - x1;
+        int diffX2X1 = x2 - x1;
         //2. Вычесть аргументы y2 и y1.
-        int diff_y2_y1 = y2 - y1;
+        int diffY2Y1 = y2 - y1;
         //3. Возвести в степень 2 результат операции 1.
-        double pow_diff_x2_x1 = Math.pow(diff_x2_x1, 2);
+        double powDiffX2X1 = Math.pow(diffX2X1, 2);
         //4. Возвести в степень 2 результат операции 2.
-        double pow_diff_y2_y1 = Math.pow(diff_y2_y1, 2);
+        double powDiffY2Y1 = Math.pow(diffY2Y1, 2);
         //5. Сложить результаты операций 3 и 4.
-        double summ_pow_coord_x_and_y =  pow_diff_x2_x1 + pow_diff_y2_y1;
+        double summPowCoordXandY =  powDiffX2X1 + powDiffY2Y1;
         //6. Вычислить корень квадратный из результата операции 5.
-        double rsl = Math.sqrt(summ_pow_coord_x_and_y);
+        double rsl = Math.sqrt(summPowCoordXandY);
 
         //Вариант 2:
         //double rsl = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
