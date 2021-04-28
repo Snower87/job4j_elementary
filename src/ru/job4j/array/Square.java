@@ -14,6 +14,11 @@ package ru.job4j.array;
  */
 
 public class Square {
+    /**
+     * Создает массив чисел и возводит их в квадрат
+     * @param bound размер массива
+     * @return возвращает массив типа int[] = число ^ 2
+     */
     public static int[] calculate(int bound) {
         int[] rst = new int[bound];
         // заполнить массив через цикл элементами от 0 до bound , возведенными в квадрат
