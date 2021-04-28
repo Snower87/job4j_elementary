@@ -1,6 +1,11 @@
 package ru.job4j.converter;
 
 /**
+ * @Раздел Блок 1. Базовый Синтаксис. / 4. Циклы.
+ * @Задание 5.8. JavaDoc. Code convention. [4087#271465] (ver. 3)
+ * @Описание 1. Запустите плагин checkstyle в IDEA. Убедитесь, что в проекте нет ошибок по оформлению.
+ * 2. Загрузите изменения в github. Оставьте ссылку на коммит.
+ *
  * @Раздел Блок 1. Базовый Синтаксис. / 2. Тестирование.
  * @Задание 0. Что такое тестирование. [159431#271440] (ver. 2)
  * @Описание 1. Доработайте код в методе main класса ru.job4j.convert.Converter. Нужно добавить проверку остальных методов.
@@ -16,15 +21,25 @@ package ru.job4j.converter;
  * 3. Загрузите изменения на сайт github. Оставьте ссылку на изменения.
  * @author Sergei Begletsov
  * @since 19.04.2020
- * @version 2
+ * @version 3
  */
 
 public class Converter {
+    /**
+     * Перевод рублей -> в евро
+     * @param value сумма в рублях
+     * @return сумма в евро
+     */
     public static int rubleToEuro(int value) {
         int rsl = value / 70; // формула перевода рублей в евро.
         return rsl;
     }
 
+    /**
+     * Перевод рублей -> в доллары
+     * @param value сумма в рублях
+     * @return сумма в долларах
+     */
     public static int rubleToDollar(int value) {
         int rsl = value / 60; // формула перевода рублей в доллары.
         return rsl;
