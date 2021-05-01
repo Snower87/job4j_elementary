@@ -25,7 +25,7 @@ public class Check {
     /**
      * Проверяет, что все элементы входного массива равны true/false
      * @param data указатель/ссылка на входной массив
-     * @return
+     * @return true - если все элементы равны, false - если разные
      */
     public static boolean mono(boolean[] data) {
         boolean result = true;
