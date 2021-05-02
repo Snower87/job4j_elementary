@@ -20,7 +20,7 @@ public class EndsWith {
     /**
      * Проверяет есть ли в конце строки подстрока
      * @param word указатель/ссылка на сравниваемое слово (строка)
-     * @param post указатель/ссылка на префикс (подстроку)
+     * @param post указатель/ссылка на постфикс (подстроку)
      * @return true - если в строке содержится подстрока, false - если нет
      */
     public static boolean endsWith(char[] word, char[] post) {
