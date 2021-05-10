@@ -2,7 +2,7 @@ package ru.job4j.loop;
 
 /**
  * @Раздел Блок 1. Базовый Синтаксис. / 4. Циклы.
- * @Задание 5.7. Ипотека. [156315#271457]
+ * @Задание 5.7. Ипотека. [156315#271457] (ver.1)
  * @Описание 1. Создайте класс ru.job4j.loop.Mortgage
  * 2. В классе Mortgage написать метод public static int year(double amount, double salary, double percent):
  *    где amount - сумма выданная по кредиту, salary - годовой доход, percent - процентная ставка по кредиту.
@@ -23,9 +23,17 @@ package ru.job4j.loop;
  * На второй год останется заплатить 30 рублей. Итого: 2 года на погашение кредита.
  * 4. Протестируйте код в junit.
  * 5. Загрузите код в github. Оставьте ссылку на коммит.
+ *
+ * @Раздел Блок 2. ООП. / 0.1. Качество кода.
+ * @Задание 1. Чтение кода и базовые ошибки. [40205#271531] (ver.2)
+ * @Описание 1. Приведите код в соответствии с правилами "понятный и поддерживаемый код":
+ * - Избыточные имена переменных,
+ * - Комментарии в теле метода,
+ * - Пустые строки в теле метода.
+ * 2. Загрузите код в github. Оставьте ссылку на коммит.
  * @author Sergei Begletsov
  * @since 28.04.2020
- * @version 1
+ * @version 2
  */
 
 public class Mortgage {
@@ -38,12 +46,10 @@ public class Mortgage {
      */
     public int year(int amount, int salary, double percent) {
         int year = 0;
-
         while (amount > 0) {
             amount = (int) (amount * (1 + percent / 100) - salary);
             year++;
         }
-
         return year;
     }
 }
