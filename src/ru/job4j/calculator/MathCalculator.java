@@ -9,7 +9,7 @@ import static ru.job4j.math.MathFunction.*;
  * 2. Загрузите файл на сайт github.com и оставьте ссылку на изменения.
  * @author Sergei Begletsov
  * @since 20.07.2021
- * @version 1
+ * @version 2
  */
 
 public class MathCalculator {
@@ -20,14 +20,14 @@ public class MathCalculator {
 
     public static double subtractionAndDivision(double first, double second) {
         return subtraction(first, second)
-                - division(first, second);
+                + division(first, second);
     }
 
     public static double useAll4ArithmeticOperations(double first, double second) {
         return sum(first, second)
                 + multiply(first, second)
                 + subtraction(first, second)
-                - division(first, second);
+                + division(first, second);
     }
 
     public static void main(String[] args) {
