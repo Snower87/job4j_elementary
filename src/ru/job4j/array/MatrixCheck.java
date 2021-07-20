@@ -90,7 +90,7 @@ public class MatrixCheck {
      */
     public static char[] extractDiagonal(char[][] board) {
         char[] rsl = new char[board.length];
-        for (int index = 0; index < rsl.length; index++ ) {
+        for (int index = 0; index < rsl.length; index++) {
             rsl[index] = board[index][index];
         }
         return rsl;
