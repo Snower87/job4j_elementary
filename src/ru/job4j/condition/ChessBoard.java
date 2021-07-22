@@ -2,7 +2,7 @@ package ru.job4j.condition;
 
 /**
  * @Раздел Блок 1. Базовый Синтаксис. / 3. Оператор ветвления.
- * @Задание 4.3.6. Math.abs. [#373616]
+ * @Задание 4.3.6. Math.abs. [#373616] (ver.1)
  * @Описание 1. Вам необходимо реализовать метод way для фигуры слон. Напомню, что эта фигура двигается только по диагонали.
  * 2. Очень важно - прежде чем вычислять количество ходов, нужно проверить ходит ли фигура по переданным координатам
  * по диагонали. Фигура ходит по диагонали только в том случае, если координаты x и y изменяются в процессе движения
@@ -11,9 +11,14 @@ package ru.job4j.condition;
  * значения - то метод также должен вернуть 0 (если хотя бы одна из координат является отрицательным числом, или больше 7).
  * 3. Протестируйте код в junit.
  * 2. Загрузите файл на сайт github.com и оставьте ссылку на изменения.
+ *
+ * @Раздел Блок 1. Базовый Синтаксис. / 3. Оператор ветвления.
+ * @Задание 4.3.6. Math.abs. [#373616] (ver.2)
+ * @Описание 1. Добавление метода isDiagonal() - проверяет ходит ли фигура по-диагонали
+ * 2. Загрузите файл на сайт github.com и оставьте ссылку на изменения.
  * @author Sergei Begletsov
  * @since 21.07.2020
- * @version 1
+ * @version 2
  */
 
 public class ChessBoard {
@@ -45,6 +50,18 @@ public class ChessBoard {
     }
 
     /**
+     * Метод проверяет ходит ли данная фигура по диагонали
+     * @param x1 - координаты точки1
+     * @param y1 - координаты точки1
+     * @param x2 - координаты точки2
+     * @param y2 - координаты точки2
+     * @return true - да, ходит по диагонали, false - нет
+     */
+    public static boolean isDiagonal(int x1, int y1, int x2, int y2) {
+        return Math.abs(x1 - x2) == Math.abs(y1 - y2);
+    }
+
+    /**
      * Метод проверяет и возврщает расстояние, которое прошел слон на шахматной доске
      * @param x1 - координаты точки1
      * @param y1 - координаты точки1
@@ -55,12 +72,9 @@ public class ChessBoard {
     public static int way(int x1, int y1, int x2, int y2) {
         int rsl = 0;
         if (positiveAndLessThan8(x1) && positiveAndLessThan8(y1)
-            && positiveAndLessThan8(x2) && positiveAndLessThan8(y2)) {
-            //Вариант 1
-            //rsl = Math.abs(x1 - x2) - Math.abs(y1 - y2) == 0 ? Math.abs(x1 - x2) : 0;
-            //Вариант 2
+            && positiveAndLessThan8(x2) && positiveAndLessThan8(y2)
+            && isDiagonal(x1, y1, x2, y2)) {
             rsl = Math.abs(x1 - x2);
-            rsl = rsl - Math.abs(y1 - y2) == 0 ? rsl : 0;
         }
         return rsl;
     }
