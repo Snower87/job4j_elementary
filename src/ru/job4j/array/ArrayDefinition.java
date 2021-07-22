@@ -2,6 +2,11 @@ package ru.job4j.array;
 
 /**
  * @Раздел Блок 1. Базовый Синтаксис. / 5. Массивы.
+ * @Задание 6.0.1.1. Размер массива. [#333582] (ver. 3)
+ * @Описание 1. В методе main к каждому созданному массиву добавьте вывод в консоль размера объявленного массива.
+ * 5. Загрузите код в github. Оставьте ссылку на коммит.
+ *
+ * @Раздел Блок 1. Базовый Синтаксис. / 5. Массивы.
  * @Задание 6.0.2. Заполнение массива. [226300#271394] (ver. 2)
  * @Описание 1.  Внутри метода main создайте массив String на 4 ячейки. Дайте имя переменной созданного массива - names.
  * 2. Заполните массив произвольными именами.
@@ -21,7 +26,7 @@ package ru.job4j.array;
  * 5. Загрузите код в github. Оставьте ссылку на коммит.
  * @author Sergei Begletsov
  * @since 28.04.2020
- * @version 2
+ * @version 3
  */
 
 public class ArrayDefinition {
@@ -43,5 +48,10 @@ public class ArrayDefinition {
         for (int i = 0; i < names.length; i++) {
             System.out.println(names[i]);
         }
+
+        System.out.println();
+        System.out.println("ages length: " + ages.length);
+        System.out.println("surnames length: " + surnames.length);
+        System.out.println("prices length: " + prices.length);
     }
 }
