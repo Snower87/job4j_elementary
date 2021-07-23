@@ -19,7 +19,7 @@ import java.util.Arrays;
  * 4. Залейте код в репозиторий, оставьте ссылку на коммит.
  * @author Sergei Begletsov
  * @since 23.07.2021
- * @version 2
+ * @version 3
  */
 
 public class Machine {
@@ -54,11 +54,20 @@ public class Machine {
             }
         }
         */
+        /*
         //Вариант 2 - окончательный
         for (int indCoin = 0; indCoin < coins.length; indCoin++) {
             while (cashBack - coins[indCoin] >= 0) {
                 rsl[size++] = coins[indCoin];
                 cashBack -= coins[indCoin];
+            }
+        }
+        */
+        //Вариант 2.1 - лаконичный доработанный (с циклом for-each)
+        for (int coin: coins) {
+            while (cashBack - coin >= 0) {
+                rsl[size++] = coin;
+                cashBack -= coin;
             }
         }
         return Arrays.copyOf(rsl, size);
