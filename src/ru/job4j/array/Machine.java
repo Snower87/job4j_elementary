@@ -19,7 +19,7 @@ import java.util.Arrays;
  * 4. Залейте код в репозиторий, оставьте ссылку на коммит.
  * @author Sergei Begletsov
  * @since 23.07.2021
- * @version 1
+ * @version 2
  */
 
 public class Machine {
@@ -28,6 +28,8 @@ public class Machine {
         int[] rsl = new int[100];
         int size = 0;
         int cashBack = money - price;  //выдаваемая аппаратом сдача
+        //Вариант 1 - первоначальный
+        /*
         for (int indCoin = 0; indCoin < coins.length;) {
             while (cashBack > 0) {
                 if (cashBack - coins[indCoin] >= 0) {
@@ -38,6 +40,26 @@ public class Machine {
                 }
             }
             break;
+        }
+        */
+        //Вариант 1.1 - доработанный/упрощенный (без цикла for)
+        /*
+        int indCoin = 0;
+        while (cashBack > 0) {
+            if (cashBack - coins[indCoin] >= 0) {
+                rsl[size++] = coins[indCoin];
+                cashBack -= coins[indCoin];
+            } else {
+                indCoin++;
+            }
+        }
+        */
+        //Вариант 2 - окончательный
+        for (int indCoin = 0; indCoin < coins.length; indCoin++) {
+            while (cashBack - coins[indCoin] >= 0) {
+                rsl[size++] = coins[indCoin];
+                cashBack -= coins[indCoin];
+            }
         }
         return Arrays.copyOf(rsl, size);
     }
